@@ -21,18 +21,20 @@ nav {
   justify-content: space-between;
   padding: 0 20%;
   min-height: 8vh;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   z-index: 10;
 }
 
-nav, a {
+nav,
+a {
   text-decoration: none;
   color: black;
   font-size: 0.9rem;
 }
 
-.nav-links a, .nav-links button {
+.nav-links a,
+.nav-links button {
   margin-left: 2rem;
 }
 
@@ -50,7 +52,6 @@ nav, a {
   cursor: pointer;
   border-radius: 1rem;
 }
-
 
 /* First Page */
 
@@ -79,14 +80,14 @@ nav, a {
 
 .intro-video {
   position: absolute;
+  width: 100%;
 }
-
 
 /* Second Page */
 
 .second-page {
   min-height: 125vh;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -96,7 +97,7 @@ nav, a {
 .smoke-video {
   position: absolute;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
   z-index: 1;
 }
@@ -108,7 +109,6 @@ nav, a {
   font-size: 3.5rem;
   font-weight: bold;
 }
-
 
 /* Third Page */
 
@@ -165,7 +165,6 @@ nav, a {
   font-size: 0.8rem;
   font-weight: bold;
 }
-
 
 /* Forth Page */
 
@@ -227,7 +226,6 @@ nav, a {
   transform-origin: bottom;
 }
 
-
 /* Fifth Page */
 
 .fifth-page {
@@ -253,16 +251,68 @@ nav, a {
   padding: 0 10rem;
 }
 
-.left-info, .right-info {
+.left-info,
+.right-info {
   width: 20%;
 }
 
-.left-info h3, .right-info h3 {
+.left-info h3,
+.right-info h3 {
   padding: 3rem 0;
   color: rgb(193, 193, 193);
 }
 
-.left-info span, .right-info span {
+.left-info span,
+.right-info span {
   font-size: 1.5rem;
   color: rgb(210, 210, 210);
+}
+
+/* Sixth Page */
+
+.sixth-page {
+  min-height: 100vh;
+  padding: 10% 20%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.portrait {
+  height: 70vh;
+}
+
+.photo-title {
+  font-size: 2rem;
+}
+
+.photo-subtitle {
+  font-size: 4rem;
+}
+
+.phone-video {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  z-index: 2;
+  transform: translateX(-40%);
+}
+
+.phone-video img,
+.phone-video video {
+  position: absolute;
+}
+
+.phone-video img {
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  transform: scale(0.8);
+}
+
+.phone-video video {
+  left: 1rem;
+  bottom: 1rem;
+  border-radius: 2rem;
+  transform: scale(0.82);
 }
