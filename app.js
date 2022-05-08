@@ -51,3 +51,38 @@ removeTextHighlightTimeline.to(".highlight", {
     color: "rgba(255,255,255,0.4)",
     stagger: 1,
 });
+
+// split phone
+const splitPhoneTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".third-page",
+        start: "-25%",
+        end: "30%",
+        scrub: true,
+        markers: {
+            startColor: "red",
+            endColor: "black",
+        },
+    },
+});
+
+splitPhoneTimeline.fromTo(
+    ".large-phone",
+    {
+        x: "40%",
+    },
+    {
+        x: "20%",
+    }
+);
+splitPhoneTimeline.fromTo(
+    ".small-phone",
+    {
+        x: "-40%",
+    },
+    {
+        x: "-20%",
+    },
+    '<'
+);
+
