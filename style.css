@@ -178,6 +178,7 @@ a {
   display: flex;
   flex: 1;
   flex-direction: column;
+  background: white;
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -210,6 +211,10 @@ a {
 .swatches img {
   padding: 0.5rem 0.3rem;
   cursor: pointer;
+}
+
+.blue {
+  z-index: 2;
 }
 
 .purcharse-right {
