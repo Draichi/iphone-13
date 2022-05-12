@@ -71,31 +71,31 @@ splitPhoneTimeline.fromTo(
     {
         x: "-20%",
     },
-    '<'
+    "<"
 );
 splitPhoneTimeline.fromTo(
     ".product-text-left",
     {
         x: 50,
-        opacity: 0
+        opacity: 0,
     },
     {
         x: 0,
-        opacity: 1
+        opacity: 1,
     },
-    '<'
+    "<"
 );
 splitPhoneTimeline.fromTo(
     ".product-text-right",
     {
         x: -50,
-        opacity: 0
+        opacity: 0,
     },
     {
         x: 0,
-        opacity: 1
+        opacity: 1,
     },
-    '<'
+    "<"
 );
 gsap.timeline({
     scrollTrigger: {
@@ -107,34 +107,70 @@ gsap.timeline({
     },
 });
 
-
 // Carousel
-const swatches = document.querySelectorAll('.swatches img')
-const gallery = document.querySelector('.phone-gallery')
-const slides = document.querySelectorAll('.phone-gallery-container')
+const swatches = document.querySelectorAll(".swatches img");
+const gallery = document.querySelector(".phone-gallery");
+const slides = document.querySelectorAll(".phone-gallery-container");
 
-let currentSwatch = 'blue'
-let closeUpImageIndex = 2
+let currentSwatch = "blue";
+let closeUpImageIndex = 2;
 
 swatches.forEach((swatch, index) => {
-    const coordLeft = slides[index].getBoundingClientRect().left
+    const coordLeft = slides[index].getBoundingClientRect().left;
 
-    swatch.addEventListener('click', e => {
-        const swatchName = e.target.getAttribute('swatch')
-        const closeUpImage = document.querySelector('.' + swatchName)
+    swatch.addEventListener("click", (e) => {
+        const swatchName = e.target.getAttribute("swatch");
+        const closeUpImage = document.querySelector("." + swatchName);
 
         if (swatchName === currentSwatch) {
-            return
+            return;
         }
 
         // Gallery
-        gsap.to(gallery, {x: -coordLeft, duration: 1, ease: 'back.out(1)'})
+        gsap.to(gallery, { x: -coordLeft, duration: 1, ease: "back.out(1)" });
 
         // CloseUp Image
-        gsap.set(closeUpImage, {zIndex: closeUpImageIndex})
-        gsap.fromTo(closeUpImage, {opacity: 0}, {opacity: 1, duration: 1})
+        gsap.set(closeUpImage, { zIndex: closeUpImageIndex });
+        gsap.fromTo(closeUpImage, { opacity: 0 }, { opacity: 1, duration: 1 });
 
-        closeUpImageIndex++
-        currentSwatch = swatchName
-    })
+        closeUpImageIndex++;
+        currentSwatch = swatchName;
+    });
+});
+
+// Video on scroll
+const videoOnScrollTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".fifth-page",
+        start: "0%",
+        end: "150%",
+        scrub: true,
+        pin: true,
+    },
+});
+videoOnScrollTimeline.fromTo(
+    ".product-video",
+    { currentTime: 0, },
+    {
+        currentTime: 3, // this video is 3s longer
+        duration: 1,
+    }
+);
+videoOnScrollTimeline.fromTo(
+    ".product-info-container h3",
+    { opacity: 0 },
+    { opacity: 1, stagger: 0.25, duration: 0.5 },
+    "<"
+);
+
+
+// Phone parallax
+const phoneParallaxTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.sixth-page',
+        start: '-25%',
+        end: '50%',
+        scrubs: true
+    }
 })
+phoneParallaxTimeline.fromTo()
