@@ -168,9 +168,23 @@ videoOnScrollTimeline.fromTo(
 const phoneParallaxTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: '.sixth-page',
-        start: '-25%',
+        start: '-40%',
         end: '50%',
-        scrubs: true
+        scrub: true
     }
 })
-phoneParallaxTimeline.fromTo()
+phoneParallaxTimeline.fromTo('.photo-description', {
+    y: 0
+}, {
+    y: -200
+})
+phoneParallaxTimeline.fromTo('.portrait-container', {
+    y: 0
+}, {
+    y: 10
+}, '<')
+phoneParallaxTimeline.fromTo('.phone-video', {
+    y: 0
+}, {
+    y: -250
+}, '<')
