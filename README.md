@@ -8,4 +8,4 @@
 npx live-server .
 ```
 
-[Hot reload animation]: iimages/intro-animation.gif
+[Hot reload animation]: images/intro-animation.gif
