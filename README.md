@@ -1,6 +1,6 @@
 # Case study | iPhone
 
-<video src='./images/intro-animation.mov' width=180></video>
+<video src='images/intro-animation.mov' width=180></video>
 
 [![Hot reload animation][]][Hot reload]
 
@@ -10,4 +10,4 @@
 npx live-server .
 ```
 
-[Hot reload animation]: https://github.com/Draichi/iphone-13/blob/main/images/intro-animation.mov?raw=true
+[Hot reload animation]: images/iphone-camera-video.mp4
