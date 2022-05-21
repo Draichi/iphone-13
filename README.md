@@ -4,7 +4,7 @@
 
 ## Live
 
-<a href='http://iphone-13.vercel.app/' target='_blank'>http://iphone-13.vercel.app/</a>
+<a href='http://iphone-13.vercel.app/' target="_blank">http://iphone-13.vercel.app/</a>
 
 
 ## Setup
