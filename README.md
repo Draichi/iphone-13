@@ -1,10 +1,12 @@
 # Case study | iPhone
 
+Conceptual iPhone 13 website
+
 ![Intro animation][]
 
 ## Live
 
-<a href='http://iphone-13.vercel.app/' target="_blank">http://iphone-13.vercel.app/</a>
+<a href='https://iphone-13.vercel.app/' target="_blank">https://iphone-13.vercel.app/</a>
 
 
 ## Setup
