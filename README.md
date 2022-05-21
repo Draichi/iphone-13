@@ -1,6 +1,10 @@
 # Case study | iPhone
 
-[![Hot reload animation][]][Hot reload]
+![Intro animation][]
+
+## Live
+
+http://iphone-13.vercel.app/
 
 ## Setup
 
@@ -8,4 +12,4 @@
 npx live-server .
 ```
 
-[Hot reload animation]: images/intro-animation.gif
+[Intro animation]: images/intro-animation.gif
