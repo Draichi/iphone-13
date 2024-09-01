@@ -1,4 +1,4 @@
-// Pin first page
+// Pin first-page
 gsap.timeline({
     scrollTrigger: {
         trigger: ".first-page",
@@ -9,7 +9,7 @@ gsap.timeline({
     },
 });
 
-// Hightlight text
+// Hightlight text on second-page
 const addTextHighlightTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".second-page",
@@ -44,7 +44,7 @@ removeTextHighlightTimeline.to(".highlight", {
     stagger: 1,
 });
 
-// split phone
+// split phone on scroll on third-page
 const splitPhoneTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".third-page",
@@ -107,7 +107,7 @@ gsap.timeline({
     },
 });
 
-// Carousel
+// Carousel of images on forth-page
 const swatches = document.querySelectorAll(".swatches img");
 const gallery = document.querySelector(".phone-gallery");
 const slides = document.querySelectorAll(".phone-gallery-container");
@@ -138,7 +138,7 @@ swatches.forEach((swatch, index) => {
     });
 });
 
-// Video on scroll
+// play video on scroll on the fifth-page
 const videoOnScrollTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".fifth-page",
@@ -164,7 +164,7 @@ videoOnScrollTimeline.fromTo(
 );
 
 
-// Phone parallax
+// Phone parallax on the sixth-page
 const phoneParallaxTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: '.sixth-page',
